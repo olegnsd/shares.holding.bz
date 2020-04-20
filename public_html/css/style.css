@@ -1,0 +1,55 @@
+
+.radio1 input:checked + span {
+background: #5cb85c;color:white;    
+    line-height: 20px;
+
+}
+.radio1 input + span {padding:10px;display:block;
+	    background-color: #eee;    line-height: 20px;
+}
+.radio1{display:block;cursor:pointer;}
+.radio1 input{display:none;}
+
+audio{width: 100%;
+    display: block;}
+
+.bid{padding:10px 0;    border-bottom: 1px solid #eee;}
+.bid:last-child{border:0;}
+
+.user-profile img{    max-width: 70px;    margin-right: 10px;}
+.user-profile.selected{font-size:20px;}
+.user-profile.selected img{max-width: 120px;}
+.user-profile .username,.user-profile img{display:inline-block;vertical-align:middle;}
+.label{display:inline-block;}
+.stars{color: orange; display:inline-block;}
+.stars.starsbig{display:block;font-size: 39px; text-align: center; line-height: 46px;}
+
+.stars.starsselect i{cursor:pointer}
+.reviewtext{    border-left: 3px solid #3498db;    padding: 5px 0px 5px 10px;    font-size: 20px;}
+
+
+.leftpanel,.content{    padding: 20px 0;}.login .content{padding:50px 0;}
+.contentcol{border-left:1px solid #eee;}.leftcol{border-right:1px solid #eee;margin-right:-1px;}
+.heading{margin: 0 -16px 0 -16px;border-bottom: 1px solid #eee;padding: 10px;font-size:20px;}
+.userpanel,.leaders{    border-bottom: 1px solid #eee;
+    margin: 0 -16px 0 -16px;
+    padding: 0 16px 5px 16px;
+}
+.leaders .user-profile{    border: 1px solid #d9edf7;
+    display: inline-block;
+padding: 5px 10px 5px 10px;
+    margin-bottom: -11px;
+    border-radius: 10px 10px 0px 0px;}
+.spacer{height:20px;}
+.mainnav>li>a{background-color: #eee;     font-size: 13px; text-align:center;  color: #333;margin-bottom:5px;padding:5px 8px;}
+.mainnav>li>a:hover,.mainnav>li>a:focus{-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);}
+.mainnav>li.active>a,.mainnav>li.active>a:hover,.mainnav>li.active>a:focus{background-color: #5cb85c;  color: white;}
+
+footer{    background: #eee;    margin: 0px -15px;    padding: 16px;}
+
+
+.userphoto{display:block;position:relative;}
+.userphoto span{display:none;position:absolute;bottom:8px;left:8px;}
+.userphoto:hover span{display:block;}
