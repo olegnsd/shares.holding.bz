@@ -4,7 +4,7 @@ setlocale(LC_ALL, 'ru_RU.utf8');
 $mysql_conf['host']   = "localhost";
 $mysql_conf['port']   = 3306;
 $mysql_conf['user']   = "wizardgrp_divd";
-$mysql_conf['pass']   = "mqPLEuceCS";
+$mysql_conf['pass']   = "48BRENVa5m";
 $mysql_conf['dbname'] = "wizardgrp_divs";
 $configLoaded=TRUE;
 $domain=$_SERVER['SERVER_NAME'];//domain.ltd

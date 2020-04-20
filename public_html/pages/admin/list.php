@@ -4,9 +4,14 @@
 if($_POST['editphone']){
 if(((int)$_GET['id'])==$account['id'])$_POST['is_admin']=1;
 $phone=phone($_POST['editphone']);
-if((substr($phone,0,1)==7) & strlen($phone)==11){
+
+//if((substr($phone,0,1)==7) & strlen($phone)==11){
+
+ if(preg_match("/^[0-9]*$/", $phone))
+    {
 mysqli_query($mysqli,"UPDATE `akcioner` SET `name`='".mysqli_escape_string($mysqli,$_POST['name'])."',`comment`='".mysqli_escape_string($mysqli,$_POST[comment])."',`phone`='".mysqli_escape_string($mysqli,$phone)."',`qiwi`='".mysqli_escape_string($mysqli,$_POST['qiwi'])."',`address`='".mysqli_escape_string($mysqli,$_POST['address'])."',`is_admin`='".(int)$_POST['is_admin']."' WHERE `id`=".(int)$_GET['id']."");
-?><div class="alert alert-success">Изменения сохранены</div><?}else{?><div class="alert alert-danger">Неверный формат телефона</div><?}
+?><div class="alert alert-success">Изменения сохранены</div><?}
+else{?><div class="alert alert-danger">Неверный формат телефона</div><?}
 }
 
 
@@ -47,7 +52,9 @@ if($data[id]==0){?><div class="alert alert-danger">Акционер не най�
 <?}
 }else{if($_POST['newphone']){
 $phone=phone($_POST['newphone']);
-if((substr($phone,0,1)==7) & strlen($phone)==11){
+//if((substr($phone,0,1)==7) & strlen($phone)==11)
+ if(   preg_match("/^[0-9]*$/", $phone))
+{
 mysqli_query($mysqli,"INSERT INTO `akcioner` (`id`, `name`, `phone`) VALUES (NULL, '".mysqli_escape_string($mysqli, $_POST['name'])."', '".mysqli_escape_string($mysqli, $phone)."');");
 if(mysqli_insert_id($mysqli)){header('Location: '.$baseHref.'admin?id='.mysqli_insert_id($mysqli));die();}else{?><div class="alert alert-danger">Ошибка при записи в базу</div><?}}else{?><div class="alert alert-danger">Неверный формат телефона</div><?}}
 

@@ -18,7 +18,7 @@ $sum_div = number_format($sum_div, 2, '.', '');
 </div>
 <div class="form-group col-md-9 col-xs-12">
 <label>СМС</label>
-<textarea class="form-control" name="text">Вам выплачены дивиденды в размере {sum} BCR по {amount} BCR за акцию. </textarea>
+<textarea class="form-control" name="text">Вам выплачены дивиденды в размере {sum} BCR по {amount} BCR за акцию.Цена пакета {packetPrice} р  </textarea>
 </div>
 <div class="form-group col-xs-12">
 <button type="submit" class="btn btn-success">Добавить задачу на отправку BCR дивидендов</button>
